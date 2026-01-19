@@ -56,13 +56,16 @@ repo-root/
 3. creation of infrastructure for multiple envritonment can be managed from multiple directories.
 
 ## Run DEV
-cd envs/dev 
+```bash
+cd envs/dev
 terraform init
 terraform plan
 terraform apply
+```
 
-## Run PROD
+## Run Prod
+```bash
 cd envs/prod
 terraform init
 terraform plan
-terraform apply
+terraform apply```
