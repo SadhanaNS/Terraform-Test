@@ -13,3 +13,11 @@ module "prod-blob-storage" {
   location             = "West Europe"
   storage_account_name = "prodstorageaccount788690"
 }
+
+module "prod-vnet" {
+  source        = "../../modules/Vnet"
+  rgname        = "prod-rg"
+  vnet_name     = "prod-vnet"
+  location      = "West Europe"
+  address_space = ["10.0.0.0/16"]
+}

@@ -9,7 +9,12 @@ variable "location" {
 
 }
 
-variable "storage_account_name" {
+variable "vnet_name" {
   type = string
+
+}
+
+variable "address_space" {
+  type = list(string)
 
 }

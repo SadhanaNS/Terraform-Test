@@ -53,3 +53,16 @@ repo-root/
 
 2. Use the -target flag with caution; it only deletes specified resources but can break dependencies.
 
+3. creation of infrastructure for multiple envritonment can be managed from multiple directories.
+
+## Run DEV
+cd envs/dev 
+terraform init
+terraform plan
+terraform apply
+
+## Run PROD
+cd envs/prod
+terraform init
+terraform plan
+terraform apply
