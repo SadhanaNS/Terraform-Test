@@ -68,4 +68,7 @@ terraform apply
 cd envs/prod
 terraform init
 terraform plan
-terraform apply```
+terraform apply
+```
+
+4. In Terraform, a module variable does not need a default value. If a variable has no default, it becomes required. You then pass it explicitly from the calling module (often main.tf).
