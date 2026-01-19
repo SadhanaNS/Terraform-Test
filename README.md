@@ -21,12 +21,13 @@ repo-root/
 ├─ outputs.tf
 ├─ .gitignore
 └─ envs/
-├─ dev/
-│ ├─ main.tf
-│ └─ var.tf
-└─ prod/
-├─ main.tf
-└─ var.tf
+   ├─ dev/
+   │  ├─ main.tf
+   │  └─ var.tf
+   └─ prod/
+      ├─ main.tf
+      └─ var.tf
+
 
 - `main.tf` – main configuration file for root-level resources (if any).  
 - `variables.tf` – input variables for the project.  
@@ -40,15 +41,15 @@ repo-root/
 
 1. **Initialize Terraform** (installs providers and sets up backend):
 
-terraform init
-terraform plan
-terraform apply --auto-approve
-terraform destroy --auto-approve
-terraform detsroy -target='instance-type.instance-name'
+1. terraform init
+2. terraform plan
+3. terraform apply --auto-approve
+4. terraform destroy --auto-approve
+5. terraform detsroy -target='instance-type.instance-name'
 
 ## Learning Notes
 
-1. deleting public IP address will delete all associated resources such as NIC and Virtual machine.
+1. Deleting a public IP address in Azure can cascade and delete associated resources like NICs and Virtual Machines, depending on dependency relationships. Always check the dependency graph (terraform graph) before deleting.
 
-2. command to delete single resource: terraform detsroy -target='instance-type.instance-name'
+2. Use the -target flag with caution; it only deletes specified resources but can break dependencies.
 
